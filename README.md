@@ -18,7 +18,10 @@ This app allows customers to make reservations to restaurants and help donate he
     * statement of the problem
     * solution
 - ### User Stories
-    * trello screenshot
+    Here's the Trello board showing the User Stories for the Restaurant, Customers and Admin:
+
+    ![Trello User Stories](https://user-images.githubusercontent.com/29721601/31281143-358f8a2c-aae1-11e7-8baa-dae847b72ec0.png)
+
 - ### Design
     * wireframe
     * figma screenshot
