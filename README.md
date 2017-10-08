@@ -29,13 +29,13 @@ This app allows customers to make reservations to restaurants and help donate he
 
   - ### The Proposed Solution
 
-  - #### Sources:
-    1. http://cnnphilippines.com/news/2017/05/02/fighting-malnutrition-in-the-philippines.html
-    2. http://www.who.int/nutrition/healthygrowthproj_stunted_videos/en/
-    3. http://cnnphilippines.com/news/2016/08/31/save-the-children-malnutrition-philippines.html
-    4. https://www.rappler.com/move-ph/issues/hunger/130046-philippines-chronic-malnutrition
-    5. https://www.rappler.com/move-ph/issues/hunger/123425-philippines-millennium-development-goals-child-malnutrition
-    6. https://www.rappler.com/nation/181340-dswd-deped-budget-malnutrition
+  #### Sources:
+  1. http://cnnphilippines.com/news/2017/05/02/fighting-malnutrition-in-the-philippines.html
+  2. http://www.who.int/nutrition/healthygrowthproj_stunted_videos/en/
+  3. http://cnnphilippines.com/news/2016/08/31/save-the-children-malnutrition-philippines.html
+  4. https://www.rappler.com/move-ph/issues/hunger/130046-philippines-chronic-malnutrition
+  5. https://www.rappler.com/move-ph/issues/hunger/123425-philippines-millennium-development-goals-child-malnutrition
+  6. https://www.rappler.com/nation/181340-dswd-deped-budget-malnutrition
 
 
 
