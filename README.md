@@ -55,6 +55,7 @@ The solution this app proposes is to let users be a part of these solutions with
     > So this is what makes the reservation app somehow unique. In fulfilling the user's hunger, he/she was also able to help donate food for malnourished children indirectly. The user didn't have to get out of his/her daily routine to do so. He/she just had to take care of his hunger in order to live.
 - **The user will now be able to rate the restaurant based on "healthiness" and cost.**
     > In order to help inform others about healthy eating, the app will allow the user to rate a restaurant based on their meals' "healthiness". The National Nutrition Council (NNC) reminds parents that as a rule of thumb, children past the breastfeeding age should always have four things on their plate: carbohydrates, protein, vegetables, and plenty of fruit ([10](#references)). So the user can probably rate it based on that, or on his/her own personal knowleddge of a healthy meal.
+
     > Users can also rate restaurants based on cost. That way, other users can choose a restaurant with their preferred ratio of health and cost. Here's where they can fulfill their hunger while keeping healthy about it.
 
 Though this is not an entirely unique way of solving malnutrition, it does help the existing solutions by allowing more people to participate even without being physically present.
