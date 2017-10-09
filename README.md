@@ -84,7 +84,8 @@ Here's the Trello board showing User Stories for the Restaurant, Customers and A
 
 ### ERD(Entity Relationship Diagram)
 
-![CG ERD](https://user-images.githubusercontent.com/29721601/31330034-3f586116-ad0f-11e7-9730-ef19b76cbfca.png "CG ERD")
+
+![CG ERD](https://user-images.githubusercontent.com/29721601/31331505-24cd8186-ad15-11e7-9421-e1d4d78f2bbd.png "CG ERD")
 
 
 ## The Name
