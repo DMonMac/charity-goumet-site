@@ -81,7 +81,11 @@ Here's the Trello board showing User Stories for the Restaurant, Customers and A
 ## Design
     * wireframe
     * figma screenshot
-    * ERD(Entity Relationship Diagram)
+
+### ERD(Entity Relationship Diagram)
+
+![CG ERD](https://user-images.githubusercontent.com/29721601/31330034-3f586116-ad0f-11e7-9730-ef19b76cbfca.png "CG ERD")
+
 
 ## The Name
   Since our app has similar features to that of Grab Taxi and Uber, we decided to make spoofs of those names. At the moment of writing this, we came up with 'Grub Tasty', 'Grubber', and 'Maize', though the last one was mostly because DMonMac was playing around.
