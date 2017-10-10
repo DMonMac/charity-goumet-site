@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Booking extends Component {
   render() {
     return(
-      <p>THis is the booking page</p>
+      <h1>THis is the booking page</h1>
     )
   }
 }

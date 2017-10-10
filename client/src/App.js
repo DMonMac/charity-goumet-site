@@ -32,13 +32,12 @@ class App extends Component {
           <nav className="navbar navbar-inverse">
             <div className="container">
               <div className="navbar-header">
-               <a className="navbar-brand">Grub Tasty</a>
+              <Link to="/" className="navbar-brand">Grub Tasty</Link>
               </div>
                <ul className="nav navbar-nav navbar-right">
                   <li className="dropdown">
                     <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span className="caret"></span></a>
                     <ul className="dropdown-menu">
-                      <li><Link to="/">Home</Link></li>
                       <li><Link to="/Restaurant">Restaurant</Link></li>
                       <li><Link to="/Booking">Booking</Link></li>
                     </ul>
