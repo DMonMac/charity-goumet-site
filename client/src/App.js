@@ -8,22 +8,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurant: [],
+      restaurant_db: [],
     }
   }
 
   componentDidMount() {
     this.setState({
-      restaurant: [
-        {
-          id: 1,
-          name: "Calle",
-          email: "Calle@calle.com",
-          password: "1234",
-          description: "Honest",
-          picture: "placeholder",
-          seat_amt: 6
-        }
+      restaurant_db: [
+        { id: 1, name: "Calle", email: "Calle@calle.com", password: "1234", description: "Honest", picture: "placeholder", seat_amt: 6},
+        { id: 2, name: "Uno", email: "uno@uno.com", password: "5678", description: "More honest", picture: "unopic.jpg", seat_amt: 12}
       ]
     })
   }
@@ -32,7 +25,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" render={ () => <Home data={this.state.restaurant}/>
+          <Route exact path="/" render={ () => <Home restaurant_data={this.state.restaurant_db}/>
           }/>
           <Route path="/Restaurant" component={Restaurant} />
           <Route path="/Booking" component={Booking} />
