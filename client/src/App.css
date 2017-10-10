@@ -1,1 +1,21 @@
+.restaurant-detail {
+  text-align: center;
+  color:#f0f0f0f;
+  font-family: 'Montserrat', sans-serif;
+}
 
+.restaurant-name{
+  font-size: 30px;
+  padding: 10px;
+}
+
+.restaurant-subtitle{
+  color:#FF473A;
+  font-size:20px;
+  padding-bottom:20px;
+}
+
+.details {
+  margin-top: 15px;
+  padding: 10px;
+}
