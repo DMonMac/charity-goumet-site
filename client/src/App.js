@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   BrowserRouter as Router,
   Route
@@ -7,6 +8,7 @@ import {
 import Home from './components/Home.js';
 import Restaurant from './components/Restaurant.js';
 import Booking from './components/Booking.js';
+
 
 class App extends Component {
   render() {
