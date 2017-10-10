@@ -5,10 +5,11 @@ export default class Home extends Component {
     let restaurant = this.props.data.map(restaurant => <li key={restaurant.id}>{restaurant.name}</li>)
     return(
       <div>
-        <p>This is a placeholder for the homepage</p>
+        <h1>This is a placeholder for the homepage</h1>
+        <h2>Reastaurant search bar</h2>
+        <h2>Restaurant List</h2>
         {restaurant}
       </div>
-
     )
   }
 }
