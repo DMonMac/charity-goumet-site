@@ -10,6 +10,8 @@ export default class Home extends Component {
         <h2>Restaurant List</h2>
         {restaurant}
       </div>
+
+
     )
   }
 }
