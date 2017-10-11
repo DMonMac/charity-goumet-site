@@ -21,11 +21,16 @@ module.exports = {
     })
   },
 
-  update: function() {
-
+  create: function(params, callback) {
+    Restaurant.create(params, function(err, restaurant) {
+      if(err) {
+        callback(err, null)
+        return
+      }
+      callback(null, restaurant)
+    })
   },
 
-  create: function() {
-
+  update: function() {
   },
 }
