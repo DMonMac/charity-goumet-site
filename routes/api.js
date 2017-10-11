@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.send("api")
+router.get('/:resource', function(req, res, next) {
+  res.json({
+    confirmation: 'success',
+    resource: req.params.resource,
+  })
 });
 
 module.exports = router
