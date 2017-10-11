@@ -38,12 +38,6 @@ export default class Home extends Component {
     return(
       <div>
         <h1>Homepage</h1>
-        <h2>Restaurant search bar</h2>
-        <input
-          onChange={(event) => this.filterRestaurants(event)}
-          value={this.state.text}
-          placeholder = "Search Restaurants"
-        />
         <RestaurantList
           data = {this.props.restaurant_data}
           filtered_data = {this.state.filtered_restaurant_data}
