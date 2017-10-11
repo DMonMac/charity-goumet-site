@@ -7,7 +7,6 @@ var ReservationSchema = new mongoose.Schema({
   complete: { type: Boolean },
   customer_id: { type: String },
   restaurant_id: { type: String }
-
 });
 
 var Reservation = module.exports = mongoose.model('ReservationSchema', ReservationSchema)
