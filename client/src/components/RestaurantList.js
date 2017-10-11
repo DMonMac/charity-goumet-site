@@ -39,7 +39,7 @@ export default class RestaurantList extends Component {
 
   filterRestaurantsByName(event){
     let restaurant_names = this.state.restaurant_db.map(
-      restaurant => restaurant.name.toLowerCase()
+      restaurant => restaurant.name
     )
     this.setState({
       text: event.target.value
