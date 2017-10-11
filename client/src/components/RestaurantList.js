@@ -48,6 +48,7 @@ export default class RestaurantList extends Component {
     })
     let typed = event.target.value.toLowerCase();
     let filtered = restaurant_names.filter(function(restaurant_name){
+      restaurant_name = restaurant_name.toLowerCase();
       return restaurant_name.indexOf(typed) > -1;
     })
     //console.log(filtered)
