@@ -20,7 +20,20 @@ export default class RestaurantList extends Component {
         { id: 3, name: "Road", email: "road@road.com", password: "9101", description: "Has Food", picture: "roadpic.jpg", seat_amt: 18},
         { id: 4, name: "Grill", email: "grill@grill.com", password: "1121", description: "Has More Food", picture: "grillpic.jpg", seat_amt: 24},
       ]
+    }, () =>
+      {
+        console.log(this.state.restaurant_db)
+        let restaurant_names = this.state.restaurant_db.map(
+          restaurant => restaurant.name)
+        console.log(restaurant_names)
+        this.setState({
+          filtered_restaurant_names: restaurant_names
+        })
+
+
     })
+
+
 
   }
 
@@ -49,8 +62,12 @@ export default class RestaurantList extends Component {
 
 
   render() {
+    let restaurants
     if (!this.state.filtered_restaurant_names) {
       let restaurants = this.state.restaurant_db.map(restaurant => <li key={restaurant.id}>{restaurant.name} ({restaurant.seat_amt} seats)</li>);
+    } else {
+        let restaurants = this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>);
+      }
       return (
         <div>
         <h2>Restaurant search bar</h2>
@@ -61,27 +78,10 @@ export default class RestaurantList extends Component {
         />
         <h2>Restaurant List</h2>
         <ul>
-            {restaurants}
+            {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
         </ul>
       </div>
-      )
-    } else {
-        let restaurants = this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>);
-        return (
-          <div>
-          <h2>Restaurant search bar</h2>
-          <input
-            onChange={(event) => this.filterRestaurantsByName(event)}
-            value={this.state.text}
-            placeholder = "Search Restaurants"
-          />
-          <h2>Restaurant List</h2>
-          <ul>
-              {restaurants}
-          </ul>
-        </div>
-      )
-    }
+    )
   }
 }
 
