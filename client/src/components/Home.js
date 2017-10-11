@@ -1,32 +1,53 @@
 import React, { Component } from 'react';
+import RestaurantList from './RestaurantList.js';
+
 
 export default class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      text: ''
+      text: '',
+      filtered_restaurant_data: []
     }
+    this.filterRestaurants = this.filterRestaurants.bind(this);
   }
 
-  searchRestaurant(event){
-    console.log(event.target.value)
+
+  filterRestaurants(event){
+    let restaurant_names = this.props.restaurant_data.map(
+      restaurant => restaurant.name.toLowerCase()
+    )
     this.setState({
       text: event.target.value
+    }, () =>
+      {console.log(this.state.text)
+    })
+    let typed = event.target.value.toLowerCase();
+    let filtered = restaurant_names.filter(function(restaurant_name){
+      return restaurant_name.indexOf(typed) > -1;
+    })
+    //console.log(filtered)
+    this.setState({
+      filtered_restaurant_data: filtered
+    }, () =>
+      {console.log(this.state.filtered_restaurant_data)
     })
   }
 
   render() {
-    let restaurant = this.props.restaurant_data.map(restaurant => <li key={restaurant.id}>{restaurant.name} ({restaurant.seat_amt} seats)</li>)
     return(
       <div>
-        <h1>This is a placeholder for the homepage</h1>
+        <h1>Homepage</h1>
         <h2>Restaurant search bar</h2>
         <input
-          onChange={(event) => this.searchRestaurant(event)}
+          onChange={(event) => this.filterRestaurants(event)}
           value={this.state.text}
+          placeholder = "Search Restaurants"
         />
-        <h2>Restaurant List</h2>
-        {restaurant}
+        <RestaurantList
+          data = {this.props.restaurant_data}
+          filtered_data = {this.state.filtered_restaurant_data}
+        />
       </div>
     )
   }
