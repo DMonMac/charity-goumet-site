@@ -3,7 +3,15 @@ import React, { Component } from 'react';
 export default class Booking extends Component {
   render() {
     return(
-      <h1>THis is the booking page</h1>
+        <div>
+          <div className="restaurant-booking">
+            <div className="restaurant-name">Chaya</div>
+            <div className="restaurant-subtitle">Japanese restaurant</div>
+            <a id="btn-booking-page" className="btn btn-default" href="#" role="button">Make a reservation</a>
+          </div>
+
+        </div>
+
     )
   }
 }
