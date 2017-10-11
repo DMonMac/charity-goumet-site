@@ -22,6 +22,27 @@ router.get('/:resource', function(req, res, next) {
   }
 });
 
+router.get('/:resource/:id', function(req, res, next) {
+  var resource = req.params.resource
+  var id = req.params.id
+
+  if (resource == 'restaurant') {
+    RestaurantController.findById(id, function(err, restaurant) {
+      if (err) {
+        res.json({
+          confirmation: 'fail',
+          message: err
+        })
+        return
+      }
+      res.json({
+        confirmation: 'success',
+        result: restaurant
+      })
+    })
+  }
+
+})
 
 
 
