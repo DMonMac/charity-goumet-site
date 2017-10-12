@@ -17,7 +17,7 @@ module.exports = {
         callback(err, null)
         return
       }
-      callback(null,zone)
+      callback(null,restaurant)
     })
   },
 

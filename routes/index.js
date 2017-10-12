@@ -6,4 +6,7 @@ router.get('/', function(req, res, next) {
   res.send("hello");
 });
 
+router.get('/createrestaurant', function(req, res, next) {
+  res.render('createrestaurant', null);
+});
 module.exports = router;

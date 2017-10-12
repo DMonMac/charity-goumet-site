@@ -6,7 +6,7 @@ var RestaurantSchema = new mongoose.Schema({
   password: { type: String },
   picture: { type: String },
   seat_amt: { type: Number },
-  description: { type:String },
+  description: { type: String, default:'' },
   location: { type: [Number] }
 });
 
