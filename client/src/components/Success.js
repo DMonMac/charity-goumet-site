@@ -6,8 +6,7 @@ class Success extends Component {
     return (
     <div>
         <div className="success-page">
-          <h1>Your reservation has been successfully
-          !</h1>
+          <h3>Your reservation has been successfully!</h3>
           <span className="thankyou"><img src="http://kids.wanpug.com/illust/illust1779.png"  /></span>
 
           <div className="success">Thank your for your reservation!</div>
