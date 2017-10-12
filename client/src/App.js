@@ -3,6 +3,7 @@ import Header from './components/Header.js';
 import Home from './components/Home.js';
 import RestaurantList from './components/RestaurantList.js';
 import Booking from './components/Booking.js';
+import Success from './components/Success.js';
 
 
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
@@ -20,7 +21,6 @@ class App extends Component {
     return (
       <Router>
           <Header />
-          
       </Router>
     );
   }
