@@ -18,24 +18,19 @@ export default class RestaurantList extends Component {
       .then(res => {
         this.setState({
           restaurant_db: res.data.results
+        }, () => {
+          let restaurant_names = this.state.restaurant_db.map(
+            restaurant =>
+              <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
+          )
+          this.setState({
+            filtered_restaurant_names: restaurant_names
+          })
         })
       })
       .catch(function (err) {
         console.log(err);
       });
-
-      /*
-     ,() =>
-      {
-        let restaurant_names = this.state.restaurant_db.map(
-          restaurant =>
-            <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
-        )
-        this.setState({
-          filtered_restaurant_names: restaurant_names
-        })
-      })
-      */
   }
 
 
