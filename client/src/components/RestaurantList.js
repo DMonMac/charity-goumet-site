@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import axios from 'axios';
-import Restaurant from './Restaurant.js';
+import RestaurantProfile from './RestaurantProfile.js';
 
 
 export default class RestaurantList extends Component {
@@ -68,9 +68,10 @@ export default class RestaurantList extends Component {
         <ul>
             {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
         </ul>
-         <Route path="/restaurants/:id" render={(props) => (
-           <Restaurant
+         <Route path="/restaurants/:id" render={({match}) => (
+           <RestaurantProfile
              database = {this.state.restaurant_db}
+             match={match}
            />
          )}/>
       </div>
