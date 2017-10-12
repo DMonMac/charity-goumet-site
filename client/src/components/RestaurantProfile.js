@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
 class Restaurant extends Component {
-  
+
 
 
   render() {
-    console.log(this.props.match)
+    console.log(this.props.database)
+    console.log(this.props.match.params.id)
+    
+
     return (
 
 
