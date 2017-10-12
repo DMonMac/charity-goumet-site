@@ -27,15 +27,12 @@ export default class Header extends Component {
         <Switch>
           <Route
             exact path="/"
-            render={ () => <Home/>}/>
+            component={Home}
+          />
           <Route
             exact path="/restaurants"
-            render={(props) => (
-              <RestaurantList
-                url={props.path}
-              />
-            )}
-            />
+            component={RestaurantList}
+          />
           <Route
             exact path="/booking"
             component={Booking}
