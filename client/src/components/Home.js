@@ -13,11 +13,8 @@ export default class Home extends Component {
   render() {
     return(
       <div>
-        <h1>Homepage</h1>
-        <RestaurantList
-          data = {this.props.restaurant_data}
-          filtered_data = {this.state.filtered_restaurant_data}
-        />
+        <h1>Welcome to Grub Tasty</h1>
+        <RestaurantList/>
       </div>
     )
   }

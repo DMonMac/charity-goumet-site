@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Restaurant from './Restaurant.js';
+import RestaurantProfile from './RestaurantProfile.js';
 
 
 export default class RestaurantList extends Component {
@@ -11,8 +11,8 @@ export default class RestaurantList extends Component {
       filtered_restaurant_names: [],
       text: ''
     }
-  }
 
+  }
 
   componentDidMount() {
     this.setState({
@@ -26,7 +26,7 @@ export default class RestaurantList extends Component {
       {
         let restaurant_names = this.state.restaurant_db.map(
           restaurant =>
-            <Link to={"/" + restaurant.id}>{restaurant.name}</Link>
+            <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
         )
         this.setState({
           filtered_restaurant_names: restaurant_names
@@ -35,46 +35,53 @@ export default class RestaurantList extends Component {
   }
 
 
-  filterRestaurantsByName(event){
+
+
+  //filterRestaurantsByName(event){
     // Creates array of names
-    let restaurant_names = this.state.restaurant_db.map(
-      restaurant => <Link to={"/" + restaurant.id}>{restaurant.name}</Link>
-    )
-
-
+  //  let restaurant_names = this.state.restaurant_db.map(
+  //    restaurant => <Link to={"/" + restaurant.id}>{restaurant.name}</Link>
+  //  )
     // Sets state to what you typed
-    this.setState({
-      text: event.target.value
-    })
-    let typed = event.target.value.toLowerCase();
+  //  this.setState({
+  //    text: event.target.value
+  //  })
+  //  let typed = event.target.value.toLowerCase();
     //Filters names
-    let filtered = restaurant_names.filter(function(restaurant_name){
-      restaurant_name = restaurant_name.toString().toLowerCase();
-      return (restaurant_name.indexOf(typed) > -1);
-    })
-    this.setState({
-      filtered_restaurant_names: filtered
-    })
-  }
+  //  let filtered = restaurant_names.filter(function(restaurant_name){
+  //    restaurant_name = restaurant_name.toString().toLowerCase();
+  //    return (restaurant_name.indexOf(typed) > -1);
+  //  })
+  //  this.setState({
+  //    filtered_restaurant_names: filtered
+  //  })
+  //}
+
+
 
 
   render() {
     return (
       <Router>
         <div>
-        <h2>Restaurant search bar</h2>
-        <input
-          onChange={(event) => this.filterRestaurantsByName(event)}
-          value={this.state.text}
-          placeholder = "Search Restaurants"
-        />
         <h2>Restaurant List</h2>
         <ul>
             {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
         </ul>
-         <Route path="/:id" component={Restaurant}/>
+         <Route path="/restaurants/:id" render={(props) => (
+           <RestaurantProfile
+             database = {this.state.restaurant_db}
+           />
+         )}/>
       </div>
     </Router>
     )
   }
 }
+
+//        <h2>Restaurant search bar</h2>
+//        <input
+//          onChange={(event) => this.filterRestaurantsByName(event)}
+//          value={this.state.text}
+//          placeholder = "Search Restaurants"
+//        />
