@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Restaurant extends Component {
-
   render() {
     return (
     <div>
@@ -15,7 +14,7 @@ class Restaurant extends Component {
               <p>about</p>
               <p>Chaya stands for Authentic Japanese Cuisine, Wholesome Food and Healthy Lifestyle. Whether you are planning an intimate dinner for friends, a corporate luncheon,or an extravagant gathering, you will find the perfect setting at Chaya. It’s as authentic as you can get out of Japan.. Oishikata!” Teng G.</p>
           </div>
-          <a id="btn-booking-page" className="btn btn-default" href="/Booking" role="button">Booking Page</a>
+          <a id="btn-booking-page" className="btn btn-default" href="/booking" role="button">Booking Page</a>
 
         </div>
     </div>
