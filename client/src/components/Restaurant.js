@@ -10,9 +10,9 @@ class Restaurant extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/restaurant')
+    axios.get('/api/restaurant/59df02020f6f422d332c3f3a')
       .then(res => {
-        console.log(res)
+        console.log(res.data.result)
       })
       .catch(function (err) {
         console.log(err);
@@ -20,7 +20,6 @@ class Restaurant extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
     <div>
         <div className="restaurant-detail ">
