@@ -11,6 +11,7 @@ export default class RestaurantList extends Component {
       restaurant_db: [],
       filtered_restaurant_names: [],
     }
+  }
 
   componentDidMount() {
     axios.get('/api/restaurant')
@@ -73,7 +74,7 @@ export default class RestaurantList extends Component {
             {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
         </ul>
          <Route path="/restaurants/:id" render={(props) => (
-           <RestaurantProfile
+           <Restaurant
              database = {this.state.restaurant_db}
            />
          )}/>
@@ -82,6 +83,7 @@ export default class RestaurantList extends Component {
     )
   }
 }
+
 
 //        <h2>Restaurant search bar</h2>
 //        <input
