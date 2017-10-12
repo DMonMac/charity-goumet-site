@@ -1,3 +1,15 @@
+.nav{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-default .navbar-brand{
+  color:#FF473A;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:#FF473A;
+}
+
 .restaurant-detail {
   text-align: center;
   margin: 0 auto;

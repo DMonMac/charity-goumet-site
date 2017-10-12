@@ -7,7 +7,7 @@ export default class Booking extends Component {
         <div className="restaurant-booking">
             <div className="restaurant-name">Chaya</div>
             <div className="restaurant-subtitle">Japanese restaurant</div>
-            <p>Opne : AM 11:00 ~　PM 10:00</p>
+            <p>Opnen : AM 11:00 ~　PM 10:00</p>
 
             <br/>
             <div className="booking-form">

@@ -29,26 +29,27 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <nav className="navbar navbar-inverse">
-            <div className="container">
-              <div className="navbar-header">
-              <Link to="/" className="navbar-brand">Grub Tasty</Link>
-              </div>
-               <ul className="nav navbar-nav navbar-right">
-                  <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span className="caret"></span></a>
-                    <ul className="dropdown-menu">
-                      <li><Link to="/Restaurant">Restaurant</Link></li>
-                      <li><Link to="/Booking">Booking</Link></li>
-                    </ul>
-                  </li>
-                </ul>
+        <nav className="navbar navbar-default">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span className="sr-only">Toggle navigation</span><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
+                <div className=" animbrand">
+                  <a className=" navbar-brand animate" href="/">Grab tasty</a>
+                </div>
             </div>
-          </nav>
+            <div className="collapse navbar-collapse" id="defaultNavbar1" >
+              <ul className="nav navbar-nav navbar-right">
+                  <li><a href="/restaurant">Restaurant</a></li>
+                  <li><a href="/booking" >Booking</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
           <Route exact path="/" render={ () => <Home restaurant_data={this.state.restaurant_db}/>
           }/>
-          <Route path="/Restaurant" component={Restaurant} />
-          <Route path="/Booking" component={Booking} />
+          <Route path="/restaurant" component={Restaurant} />
+          <Route path="/booking" component={Booking} />
         </div>
       </Router>
     );
