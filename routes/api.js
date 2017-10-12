@@ -44,10 +44,22 @@ router.get('/:resource/:id', function(req, res, next) {
 })
 
 router.post('/:resource', function(req, res, next) {
-
+  var resource = req.params.resource
+  if (resource == 'restaurant') {
+    RestaurantController.create(req.body, function(err, restaurant) {
+      if (err) {
+        res.json({
+          confirmation: 'fail',
+          message: err
+        })
+        return
+      }
+      res.json({
+        confirmation: 'success',
+        result: restaurant
+      })
+    })
+  }
 })
-
-
-
 
 module.exports = router

@@ -17,7 +17,7 @@ module.exports = {
         callback(err, null)
         return
       }
-      callback(null,zone)
+      callback(null,restaurant)
     })
   },
 
@@ -29,8 +29,5 @@ module.exports = {
       }
       callback(null, restaurant)
     })
-  },
-
-  update: function() {
   },
 }
