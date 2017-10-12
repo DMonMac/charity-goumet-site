@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Restaurant from './Restaurant.js';
 
 
 export default class RestaurantList extends Component {
@@ -12,6 +13,7 @@ export default class RestaurantList extends Component {
     }
   }
 
+
   componentDidMount() {
     this.setState({
       restaurant_db: [
@@ -22,54 +24,43 @@ export default class RestaurantList extends Component {
       ]
     }, () =>
       {
-        console.log(this.state.restaurant_db)
         let restaurant_names = this.state.restaurant_db.map(
-          restaurant => restaurant.name)
-        console.log(restaurant_names)
+          restaurant =>
+            <Link to={"/" + restaurant.id}>{restaurant.name}</Link>
+        )
         this.setState({
           filtered_restaurant_names: restaurant_names
         })
-
-
     })
-
-
-
   }
+
 
   filterRestaurantsByName(event){
+    // Creates array of names
     let restaurant_names = this.state.restaurant_db.map(
-      restaurant => restaurant.name
+      restaurant => <Link to={"/" + restaurant.id}>{restaurant.name}</Link>
     )
+
+
+    // Sets state to what you typed
     this.setState({
       text: event.target.value
-    }, () =>
-      {console.log(this.state.text)
     })
     let typed = event.target.value.toLowerCase();
+    //Filters names
     let filtered = restaurant_names.filter(function(restaurant_name){
-      restaurant_name = restaurant_name.toLowerCase();
-      return restaurant_name.indexOf(typed) > -1;
+      restaurant_name = restaurant_name.toString().toLowerCase();
+      return (restaurant_name.indexOf(typed) > -1);
     })
-    //console.log(filtered)
     this.setState({
       filtered_restaurant_names: filtered
-    }, () =>
-      {console.log(this.state.filtered_restaurant_names)
     })
   }
-
-
 
 
   render() {
-    let restaurants
-    if (!this.state.filtered_restaurant_names) {
-      let restaurants = this.state.restaurant_db.map(restaurant => <li key={restaurant.id}>{restaurant.name} ({restaurant.seat_amt} seats)</li>);
-    } else {
-        let restaurants = this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>);
-      }
-      return (
+    return (
+      <Router>
         <div>
         <h2>Restaurant search bar</h2>
         <input
@@ -81,9 +72,9 @@ export default class RestaurantList extends Component {
         <ul>
             {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
         </ul>
+         <Route path="/:id" component={Restaurant}/>
       </div>
+    </Router>
     )
   }
 }
-
-//   {this.props.filtered_data.map((restaurant, index) => <li key={index}><Link to="/restaurant">{restaurant}</Link></li>)}
