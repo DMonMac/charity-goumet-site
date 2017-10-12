@@ -16,12 +16,12 @@ export default class Header extends Component {
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span className="sr-only">Toggle navigation</span><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
               <div className=" animbrand">
-                <a className=" navbar-brand animate" id="header-logo" href="/">Grab tasty</a>
+                <a className=" navbar-brand animate" id="header-logo" href="/">Grub Tasty</a>
               </div>
           </div>
           <div className="collapse navbar-collapse" id="defaultNavbar1" >
             <ul className="nav navbar-nav navbar-right">
-                <li><a href="/restaurant">Restaurant</a></li>
+                <li><a href="/restaurants">Restaurant</a></li>
                 <li><a href="/booking" >Booking</a></li>
             </ul>
           </div>
