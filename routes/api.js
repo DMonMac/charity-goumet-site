@@ -62,7 +62,4 @@ router.post('/:resource', function(req, res, next) {
   }
 })
 
-
-
-
 module.exports = router

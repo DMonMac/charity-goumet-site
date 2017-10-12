@@ -30,7 +30,4 @@ module.exports = {
       callback(null, restaurant)
     })
   },
-
-  update: function() {
-  },
 }
