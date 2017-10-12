@@ -16,6 +16,23 @@
   color:#FF473A;
 }
 
+.home-title{
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  padding:50px 0px 20px 0;
+  opacity:0.9;
+}
+
+.home-description{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  opacity:0.9;
+}
+
+
 .restaurant-detail {
   text-align: center;
   margin: 0 auto;
@@ -32,12 +49,22 @@
   width:80%;
 }
 
+.restaurant-list-title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+  margin: auto;
+  text-align: center;
+  color:#FF473A;
+  margin:30px 0 20px 0;
+}
 
 .restaurant-name{
   font-size: 30px;
   margin: auto;
-  padding: 10px;
+  padding: 30px 0 20px 0;
   text-align: center;
+  color:#FF473A;
+
 }
 
 .restaurant-subtitle{
@@ -47,16 +74,19 @@
   padding-bottom:20px;
 }
 
-.details {
+.restaurant-description {
   padding: 15px;
   font-size:13px;
-  margin: auto;
+  margin: 0 auto;
+  display: block;
   text-align: left;
+  width:57%;
 }
 
 #detail-picture{
-  width:100%;
+  width:600px;
   height:auto;
+  margin: auto;
 }
 
 #btn-booking-page{
@@ -91,7 +121,6 @@ margin: auto;
 }
 
 .thankyou img{
-
   text-align: center;
   margin:0 auto;
   width:320px;
@@ -99,5 +128,22 @@ margin: auto;
   padding:50px 0;
   opacity:0.8;
   border-radius:500px;
+}
 
+.restaurant-list-ul{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  width:430px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding:15px;
+}
+
+.restaurant-list-li{
+  text-align: center;
+  padding-right: 10px;
+  list-style:none;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
 }
