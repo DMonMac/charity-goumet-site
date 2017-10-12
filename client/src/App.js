@@ -3,6 +3,7 @@ import Header from './components/Header.js';
 import Home from './components/Home.js';
 import Restaurant from './components/Restaurant.js';
 import Booking from './components/Booking.js';
+import Success from './components/Success.js';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
@@ -34,7 +35,7 @@ class App extends Component {
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span className="sr-only">Toggle navigation</span><span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span></button>
                 <div className=" animbrand">
-                  <a className=" navbar-brand animate" href="/">Grab tasty</a>
+                  <a className=" navbar-brand animate" id="header-logo" href="/">Grab tasty</a>
                 </div>
             </div>
             <div className="collapse navbar-collapse" id="defaultNavbar1" >
@@ -50,6 +51,7 @@ class App extends Component {
           }/>
           <Route path="/restaurant" component={Restaurant} />
           <Route path="/booking" component={Booking} />
+          <Route path="/success" component={Success} />
         </div>
       </Router>
     );

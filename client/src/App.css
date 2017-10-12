@@ -2,6 +2,12 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+#header-logo{
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 27px;
+  color:#EB5757;
+}
+
 .navbar-default .navbar-brand{
   color:#FF473A;
 }
@@ -72,7 +78,23 @@
 .booking-form{
 border: 1px solid #ddd;
 border-radius: 20px;
-padding:20px;
+padding:25px;
 width:320px;
 margin: auto;
 }
+
+.success-page {
+  font-family: 'Montserrat', sans-serif;
+  color:#EB5757;
+  text-align: center;
+  margin:50px;
+}
+
+.thankyou img{
+  width:300px;
+  height:auto;
+  padding:50px 0;
+  border-radius: 50px;
+}
+
+font-size: 40px;
