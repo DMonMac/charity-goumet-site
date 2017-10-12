@@ -17,12 +17,13 @@
 
 .restaurant-name{
   font-size: 30px;
+  margin: auto;
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .restaurant-subtitle{
-  text-align: left;
+  text-align: center;
   color:#FF473A;
   font-size:20px;
   padding-bottom:20px;
