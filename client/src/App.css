@@ -1,3 +1,21 @@
+.nav{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#header-logo{
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 27px;
+  color:#EB5757;
+}
+
+.navbar-default .navbar-brand{
+  color:#FF473A;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:#FF473A;
+}
+
 .restaurant-detail {
   text-align: center;
   margin: 0 auto;
@@ -17,12 +35,13 @@
 
 .restaurant-name{
   font-size: 30px;
+  margin: auto;
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .restaurant-subtitle{
-  text-align: left;
+  text-align: center;
   color:#FF473A;
   font-size:20px;
   padding-bottom:20px;
@@ -59,7 +78,21 @@
 .booking-form{
 border: 1px solid #ddd;
 border-radius: 20px;
-padding:20px;
+padding:25px;
 width:320px;
 margin: auto;
+}
+
+.success-page {
+  font-family: 'Montserrat', sans-serif;
+  color:#EB5757;
+  text-align: center;
+  margin:50px;
+}
+
+.thankyou img{
+  width:300px;
+  height:auto;
+  padding:50px 0;
+  border-radius: 50px;
 }
