@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Restaurant extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get('/api/restaurant/59df02020f6f422d332c3f3a')
+      .then(res => {
+        console.log(res.data.result)
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 
   render() {
     return (
