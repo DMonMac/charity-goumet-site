@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import axios from 'axios';
 import Restaurant from './Restaurant.js';
 
 
@@ -9,20 +10,22 @@ export default class RestaurantList extends Component {
     this.state = {
       restaurant_db: [],
       filtered_restaurant_names: [],
-      text: ''
     }
   }
 
-
   componentDidMount() {
-    this.setState({
-      restaurant_db: [
-        { id: 1, name: "Calle", email: "Calle@calle.com", password: "1234", description: "Honest", picture: "callepic.jpg", seat_amt: 6},
-        { id: 2, name: "Uno", email: "uno@uno.com", password: "5678", description: "More honest", picture: "unopic.jpg", seat_amt: 12},
-        { id: 3, name: "Road", email: "road@road.com", password: "9101", description: "Has Food", picture: "roadpic.jpg", seat_amt: 18},
-        { id: 4, name: "Grill", email: "grill@grill.com", password: "1121", description: "Has More Food", picture: "grillpic.jpg", seat_amt: 24},
-      ]
-    }, () =>
+    axios.get('/api/restaurant')
+      .then(res => {
+        this.setState({
+          restaurant_db: res.data.results
+        })
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+
+      /*
+     ,() =>
       {
         let restaurant_names = this.state.restaurant_db.map(
           restaurant =>
@@ -31,9 +34,9 @@ export default class RestaurantList extends Component {
         this.setState({
           filtered_restaurant_names: restaurant_names
         })
-    })
+      })
+      */
   }
-
 
   filterRestaurantsByName(event){
     // Creates array of names
@@ -59,6 +62,7 @@ export default class RestaurantList extends Component {
 
 
   render() {
+    console.log(this.state)
     return (
       <Router>
         <div>
