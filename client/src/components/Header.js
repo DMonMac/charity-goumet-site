@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Home from './Home.js';
 import RestaurantList from './RestaurantList.js';
 import Booking from './Booking.js';
+import Success from './Success.js';
 
 export default class Header extends Component {
   render() {
@@ -38,6 +39,10 @@ export default class Header extends Component {
           <Route
             exact path="/booking"
             component={Booking}
+          />
+          <Route
+            exact path="/success"
+            component={Success}
           />
       </Switch>
 
