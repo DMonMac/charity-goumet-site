@@ -91,8 +91,11 @@ margin: auto;
 }
 
 .thankyou img{
-  width:300px;
+  text-align: center;
+  margin:0 auto;
+  width:320px;
   height:auto;
   padding:50px 0;
-  border-radius: 50px;
+  opacity:0.8;
+  border-radius:500px;
 }
