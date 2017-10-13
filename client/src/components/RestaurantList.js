@@ -64,9 +64,9 @@ export default class RestaurantList extends Component {
     return (
       <Router>
         <div>
-        <h2>Restaurant List</h2>
-        <ul>
-            {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
+        <h2 className="restaurant-list-title">Restaurant List</h2>
+        <ul className="restaurant-list-ul">
+            {this.state.filtered_restaurant_names.map((restaurant, index) => <li className="restaurant-list-li" key={index}>{restaurant} </li>)}
         </ul>
          <Route path="/restaurants/:id" render={({match}) => (
            <RestaurantProfile

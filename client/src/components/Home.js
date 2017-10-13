@@ -13,7 +13,8 @@ export default class Home extends Component {
   render() {
     return(
       <div>
-        <h1>Welcome to Grub Tasty</h1>
+        <h2 className="home-title">Welcome to Grub Tasty</h2>
+        <p  className="home-description">Your reservation will be able to donate healthy meals to children.</p>
         <RestaurantList/>
       </div>
     )

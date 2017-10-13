@@ -17,8 +17,8 @@ class Restaurant extends Component {
 
                 <div className="restaurant-name">{restaurant.name}</div>
                 <img src={restaurant.picture} id="detail-picture"
-                className="img-responsive" alt="Cinque Terre" width="304" height="136" />
-                 <div className="details">
+                className="img-responsive" alt="Cinque Terre"  />
+                 <div className="restaurant-description">
                     <h3>Description</h3>
                     <p>{restaurant.description}</p>
                 </div>
