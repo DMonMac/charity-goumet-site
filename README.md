@@ -97,5 +97,6 @@ Here's the Trello board showing User Stories for the Restaurant, Customers and A
 
 ## THE APP
 ### Features
+![home_screenshot](https://user-images.githubusercontent.com/29721618/31528502-3bfc8886-b006-11e7-9760-fda96c25080c.PNG)
 #### Restaurant
 #### Customer
