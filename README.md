@@ -1,4 +1,5 @@
-# GRUB TASTY
+![Logo](https://user-images.githubusercontent.com/29721601/31531790-c4aa1936-b01b-11e7-9c51-c634843471f5.png "Logo")
+
 This app allows customers to make reservations to restaurants and help donate healthy meals to children.
 
 ### Main Sections
