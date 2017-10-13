@@ -92,11 +92,24 @@ Here's the Trello board showing User Stories for the Restaurant, Customers and A
   Since our app has similar features to that of Grab Taxi and Uber, we decided to make spoofs of those names. At the moment of writing this, we came up with 'Grub Tasty', 'Grubber', and 'Maize', though the last one was mostly because DMonMac was playing around.
 
 ## Tools and Methodologies
-    * Slack and github screenshots
+### Slack
+![Slack](https://user-images.githubusercontent.com/29721601/31531276-a70b33fe-b018-11e7-97e9-29a5faf02f74.png "Slack")
+
+### GitHub
+![GitHub](https://user-images.githubusercontent.com/29721601/31531295-bdb5927a-b018-11e7-9672-790692e957af.png "GitHub")
 
 
 ## THE APP
 ### Features
-![home_screenshot](https://user-images.githubusercontent.com/29721618/31528502-3bfc8886-b006-11e7-9760-fda96c25080c.PNG)
-#### Restaurant
-#### Customer
+
+#### Homepage with Restaurant List
+![Homepage](https://user-images.githubusercontent.com/29721601/31531274-a6b8c236-b018-11e7-9504-dc150e8a8629.png "Homepage")
+
+#### Restaurant Profile
+![Restaurant Profile](https://user-images.githubusercontent.com/29721601/31531275-a6e1b204-b018-11e7-86d4-a8e00fa212e8.png "Restaurant Profile")
+
+#### Reservation
+![Reservation](https://user-images.githubusercontent.com/29721601/31531272-a68e4e48-b018-11e7-8c93-a3ca8201518e.png "Reservation")
+
+#### Donation
+![Donation](https://user-images.githubusercontent.com/29721601/31531277-a734f0cc-b018-11e7-9379-59b89fc79b45.png "Donation")
