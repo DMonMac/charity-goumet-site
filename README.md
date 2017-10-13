@@ -79,8 +79,8 @@ Here's the Trello board showing User Stories for the Restaurant, Customers and A
 ![Trello User Stories](https://user-images.githubusercontent.com/29721601/31281143-358f8a2c-aae1-11e7-8baa-dae847b72ec0.png)
 
 ## Design
-    * wireframe
-    * figma screenshot
+![Figma](https://user-images.githubusercontent.com/29721601/31531581-814f946e-b01a-11e7-8788-d84a4d364e27.png "Figma")
+
 
 ### ERD(Entity Relationship Diagram)
 
