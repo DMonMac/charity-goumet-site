@@ -1,3 +1,7 @@
+body {
+  box-sizing: content-box;
+}
+
 .nav{
   font-family: 'Montserrat', sans-serif;
 }

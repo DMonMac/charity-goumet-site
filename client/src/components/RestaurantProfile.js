@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class Restaurant extends Component {
   render() {
     let restaurant_data = this.props.database.filter(
-      restaurant => restaurant._id == this.props.match.params.id
+      restaurant => restaurant._id === this.props.match.params.id
     )
-    console.log(restaurant_data)
     if (!restaurant_data) {
       return <div>Sorry, but the restaurant was not found</div>
     }

@@ -5,9 +5,7 @@ export default class Booking extends Component {
     return(
         <div>
         <div className="restaurant-booking">
-            <div className="restaurant-name">Chaya</div>
-            <div className="restaurant-subtitle">Japanese restaurant</div>
-            <p>Opnen : AM 11:00 ~　PM 10:00</p>
+
 
             <br/>
             <div className="booking-form">
@@ -37,3 +35,7 @@ export default class Booking extends Component {
     )
   }
 }
+
+//<div className="restaurant-name">Chaya</div>
+//<div className="restaurant-subtitle">Japanese restaurant</div>
+//<p>Opnen : AM 11:00 ~　PM 10:00</p>

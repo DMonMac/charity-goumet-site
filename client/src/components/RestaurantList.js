@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import RestaurantProfile from './RestaurantProfile.js';
 
 
+//let restaurant_names = this.props.database.map(
+//  restaurant =>
+//    <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
+//)
+//this.setState({
+//  filtered_restaurant_names: restaurant_names
+//})
+
+
 export default class RestaurantList extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       restaurant_db: [],
-      filtered_restaurant_names: [],
+      filtered_restaurant_names: []
     }
   }
 
@@ -19,19 +28,25 @@ export default class RestaurantList extends Component {
         this.setState({
           restaurant_db: res.data.results
         }, () => {
-          let restaurant_names = this.state.restaurant_db.map(
-            restaurant =>
-              <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
-          )
-          this.setState({
-            filtered_restaurant_names: restaurant_names
-          })
-        })
+                    let restaurant_names = this.state.restaurant_db.map(restaurant =>
+                      <div>
+
+                        <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
+                      </div>
+
+
+                    )
+                    this.setState({
+                      filtered_restaurant_names: restaurant_names
+                    })
+                  })
       })
       .catch(function (err) {
         console.log(err);
       });
   }
+
+
 
 
 
@@ -60,22 +75,20 @@ export default class RestaurantList extends Component {
 
 
   render() {
-    console.log(this.state)
-    return (
-      <Router>
-        <div>
-        <h2>Restaurant List</h2>
-        <ul>
-            {this.state.filtered_restaurant_names.map((restaurant, index) => <li key={index}>{restaurant}</li>)}
-        </ul>
-         <Route path="/restaurants/:id" render={({match}) => (
-           <RestaurantProfile
-             database = {this.state.restaurant_db}
-             match={match}
-           />
-         )}/>
+    const list = this.props.database.map((restaurant, index) =>
+      <div className="col-md-3">
+          <img src={restaurant.picture} height="197" width="100%"/>
+          <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
+
       </div>
-    </Router>
+    )
+    return (
+        <div className="container-fluid">
+          <h2>Restaurant List</h2>
+          <div className="row">
+            {list}
+          </div>
+        </div>
     )
   }
 }
@@ -87,3 +100,6 @@ export default class RestaurantList extends Component {
 //          value={this.state.text}
 //          placeholder = "Search Restaurants"
 //        />
+
+
+//<img src={`${restaurant.picture}`}/>

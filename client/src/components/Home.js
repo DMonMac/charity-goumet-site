@@ -14,7 +14,9 @@ export default class Home extends Component {
     return(
       <div>
         <h1>Welcome to Grub Tasty</h1>
-        <RestaurantList/>
+          <RestaurantList
+            database={this.props.restaurant_db}
+          />
       </div>
     )
   }
