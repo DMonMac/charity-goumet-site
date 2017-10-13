@@ -1,5 +1,7 @@
 body {
   box-sizing: content-box;
+  font-family: 'Mouse Memoirs', sans-serif;
+  color:#EB5757;
 }
 
 .nav{

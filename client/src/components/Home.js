@@ -13,7 +13,6 @@ export default class Home extends Component {
   render() {
     return(
       <div>
-        <h1>Welcome to Grub Tasty</h1>
           <RestaurantList
             database={this.props.restaurant_db}
           />

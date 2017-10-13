@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import RestaurantProfile from './RestaurantProfile.js';
 
 
 //let restaurant_names = this.props.database.map(
@@ -76,15 +75,15 @@ export default class RestaurantList extends Component {
 
   render() {
     const list = this.props.database.map((restaurant, index) =>
-      <div className="col-md-3">
-          <Link to={`/restaurants/${restaurant._id}`}><img src={restaurant.picture} height="197" width="100%"/></Link>
+      <div key={index} className="col-md-3">
+          <Link to={`/restaurants/${restaurant._id}`}><img src={restaurant.picture} alt="Restaurant" height="197" width="100%"/></Link>
           <h3>{restaurant.name}</h3>
 
       </div>
     )
     return (
         <div className="container-fluid">
-          <h2>Restaurant List</h2>
+          <h1>Restaurant List</h1>
           <div className="row">
             {list}
           </div>
