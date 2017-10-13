@@ -77,8 +77,8 @@ export default class RestaurantList extends Component {
   render() {
     const list = this.props.database.map((restaurant, index) =>
       <div className="col-md-3">
-          <img src={restaurant.picture} height="197" width="100%"/>
-          <Link to={`/restaurants/${restaurant._id}`}>{restaurant.name}</Link>
+          <Link to={`/restaurants/${restaurant._id}`}><img src={restaurant.picture} height="197" width="100%"/></Link>
+          <h3>{restaurant.name}</h3>
 
       </div>
     )
